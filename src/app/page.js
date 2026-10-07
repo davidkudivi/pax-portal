@@ -130,10 +130,18 @@ const communityCards = [
     title: 'Pax Sub Groups',
     icon: 'fa-people-group',
     items: [
-      { name: 'Catholic Charismatic Renewal', subtitle: 'ITI-CCR', action: 'Catholic Charismatic Renewal' },
-      { name: 'English Lectors Ministry', subtitle: 'Public reading & proclamation', action: 'English Lectors Ministry' },
-      { name: 'Legion of Mary', subtitle: 'Evangelisation & prayer', action: 'Legion of Mary' },
-      { name: 'Mass Servers', subtitle: 'KLBS / Blessed Sacrament', action: 'Mass Servers' },
+      { name: 'Catholic Charismatic Renewal (ITI-CCR)', action: 'Catholic Charismatic Renewal' },
+      { name: 'English Lectors Ministry' },
+      { name: 'Legion of Mary' },
+      { name: 'Knights and Ladies of the Blessed Sacrament (KLBS)/Mass Servers' },
+      { name: 'Sacred Heart of Jesus' },
+      { name: 'TESMAG (Student Marshallans Association)' },
+      { name: 'Pax Choir' },
+      { name: 'Organising and Technical Ministry (Organa)' },
+      { name: 'Ushering Ministry' },
+      { name: 'Visitation Ministry' },
+      { name: 'Catholic Youth Organisation (CYO)' },
+      { name: 'GATEs-KSJI (Student Members of St. John International)' },
     ],
   },
   {
@@ -408,7 +416,7 @@ export default function Home() {
           <div className="mb-16 text-center">
             <span className="text-sm font-bold uppercase tracking-wider text-[#d97706]">Get Involved</span>
             <h2 className="mt-2 mb-4 text-3xl font-bold text-[#1e3a8a] md:text-4xl">Find Your Community</h2>
-            <p className="mx-auto max-w-2xl text-slate-600">Join our WhatsApp groups to connect with students who share your interests, faculty, or hall of residence.</p>
+            <p className="mx-auto max-w-2xl text-slate-600">Explore Pax subgroups and connect with the community.</p>
           </div>
 
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
@@ -427,13 +435,15 @@ export default function Home() {
                 <div className="space-y-4 p-6">
                   {card.items.map((item) => (
                     <div key={item.name} className="flex items-center justify-between rounded-xl p-3 transition-colors hover:bg-slate-50">
-                      <div>
-                        <h4 className="font-bold text-slate-800">{item.name}</h4>
-                        <p className="text-sm text-slate-500">{item.subtitle}</p>
+                      <div className="min-w-0">
+                        <h4 className="break-words font-bold text-slate-800">{item.name}</h4>
+                        {item.subtitle && <p className="text-sm text-slate-500">{item.subtitle}</p>}
                       </div>
-                      <button type="button" onClick={() => handleJoinGroup(item.action)} className="flex items-center gap-2 rounded-lg bg-[#25D366] px-4 py-2 font-semibold text-white shadow-sm transition-transform hover:scale-105 hover:bg-[#1da851]">
-                        💬 Join
-                      </button>
+                      {item.action && (
+                        <button type="button" onClick={() => handleJoinGroup(item.action)} className="flex items-center gap-2 rounded-lg bg-[#25D366] px-4 py-2 font-semibold text-white shadow-sm transition-transform hover:scale-105 hover:bg-[#1da851]">
+                          💬 Join
+                        </button>
+                      )}
                     </div>
                   ))}
                 </div>
