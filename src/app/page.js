@@ -330,7 +330,7 @@ export default function Home() {
                   <span className="mr-2 text-[#1d4ed8]">☰</span> Contents
                 </h3>
                 <button type="button" onClick={handleDownload} className="flex items-center gap-2 rounded-lg bg-slate-200 px-3 py-1.5 text-sm font-medium text-slate-700 transition-colors hover:bg-slate-300">
-                  ⬇ PDF
+                  ⬇ Download Pax Aider PDF
                 </button>
               </div>
               <div className="reader-scroll flex flex-1 flex-col space-y-1 overflow-y-auto p-4">
