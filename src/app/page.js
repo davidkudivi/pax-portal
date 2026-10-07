@@ -233,6 +233,11 @@ export default function Home() {
   };
 
   const handleJoinGroup = (groupName) => {
+    if (groupName === 'Catholic Charismatic Renewal') {
+      window.open('https://chat.whatsapp.com/Cwd3QvA8GwKJkei85Bwy2F', '_blank', 'noopener,noreferrer');
+      return;
+    }
+
     openModal('Redirecting to WhatsApp', `You are about to join the "${groupName}" WhatsApp group. For security, please ensure you introduce yourself to the admins with your Student ID once joined.`);
   };
 
@@ -295,9 +300,6 @@ export default function Home() {
         </div>
 
         <div className="relative z-10 mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
-          <span className="mb-6 inline-block rounded-full border border-[#60a5fa]/30 bg-[#1e40af]/50 px-3 py-1 text-sm font-semibold tracking-wide text-[#fbbf24] backdrop-blur-sm">
-            CLASS OF 2028 FRESHMEN PORTAL
-          </span>
           <h1 className="mb-6 text-4xl font-extrabold leading-tight tracking-tight text-white md:text-5xl lg:text-7xl">
             Welcome Home to <br />
             <span className="bg-gradient-to-r from-[#fbbf24] to-yellow-200 bg-clip-text text-transparent">Pax Romana KNUST</span>
