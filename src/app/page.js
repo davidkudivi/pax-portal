@@ -168,9 +168,11 @@ export default function Home() {
       <nav id="navbar" className="fixed z-50 w-full border-b border-slate-200/80 bg-white/95 backdrop-blur-md transition-all duration-300">
         <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
           <div className="flex cursor-pointer items-center gap-3" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#1e40af] text-xl text-[#fbbf24] shadow-md">
-              ✦
-            </div>
+            <img
+              src="/photo_2026-10-07_13-00-05.jpg"
+              alt="Pax Romana KNUST Logo"
+              className="h-12 w-12 rounded-full object-cover shadow-md ring-2 ring-[#1e40af]/20"
+            />
             <div className="flex flex-col">
               <span className="text-xl font-bold leading-tight text-[#1e3a8a]">Pax Romana</span>
               <span className="text-[10px] font-semibold tracking-wider text-[#d97706]">KNUST LOCAL</span>
