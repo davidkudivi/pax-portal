@@ -196,7 +196,7 @@ const scheduleCards = [
 ];
 
 export default function Home() {
-  const [activeChapter, setActiveChapter] = useState('welcome');
+  const [activeChapter, setActiveChapter] = useState('about');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [modal, setModal] = useState({ open: false, title: '', message: '' });
 
