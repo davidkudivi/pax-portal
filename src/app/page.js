@@ -147,20 +147,7 @@ const communityCards = [
   {
     title: 'Pax Programs',
     icon: 'fa-calendar-check',
-    items: [
-      { name: 'Students Mass', subtitle: 'Every Tuesday, 6:30pm', action: 'Students Mass' },
-      { name: 'Dawn Rosary', subtitle: 'Thursday in halls/hostels', action: 'Dawn Rosary' },
-      { name: 'Cell Meetings', subtitle: 'Saturday in halls/hostels', action: 'Cell Meetings' },
-    ],
-  },
-  {
-    title: 'Orientation & Support',
-    icon: 'fa-bullhorn',
-    items: [
-      { name: 'Freshers Orientation', subtitle: 'Sunday, 18th October, 2026', action: 'Freshers Orientation' },
-      { name: 'Pax Parents Meet-Up', subtitle: 'After 8:00am Mass', action: 'Pax Parents' },
-      { name: 'Chaplaincy Support', subtitle: 'Our Lady of the Holy Rosary', action: 'Chaplaincy Support' },
-    ],
+    items: [],
   },
   {
     title: 'Safety & Contacts',
