@@ -299,7 +299,7 @@ export default function Home() {
         )}
       </nav>
 
-      <header className="relative flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#1e3a8a] via-[#1e40af] to-[#1d4ed8] pt-32 pb-20 lg:pt-48 lg:pb-32">
+      <header className="relative flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#1e3a8a] via-[#1e40af] to-[#1d4ed8] pt-32 pb-16 sm:pb-20 lg:pt-48 lg:pb-32">
         <div className="absolute inset-0 z-0 opacity-20">
           <svg className="absolute right-[-5%] top-[-10%] h-full w-1/2 text-white" fill="currentColor" viewBox="0 0 100 100" preserveAspectRatio="none">
             <polygon points="0,100 100,0 100,100" />
@@ -308,38 +308,38 @@ export default function Home() {
         </div>
 
         <div className="relative z-10 mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
-          <h1 className="mb-6 text-4xl font-extrabold leading-tight tracking-tight text-white md:text-5xl lg:text-7xl">
+          <h1 className="mb-6 text-3xl font-extrabold leading-tight tracking-tight text-white sm:text-4xl md:text-5xl lg:text-7xl">
             Welcome Home to <br />
             <span className="bg-gradient-to-r from-[#fbbf24] to-yellow-200 bg-clip-text text-transparent">Pax Romana KNUST</span>
           </h1>
-          <p className="mx-auto mb-10 max-w-2xl text-lg font-light text-blue-100 md:text-xl">
+          <p className="mx-auto mb-8 max-w-2xl text-base font-light text-blue-100 sm:mb-10 sm:text-lg md:text-xl">
             Your spiritual family on campus. Discover your community, navigate university life, and grow in faith as a Catholic student.
           </p>
-          <div className="flex flex-col justify-center gap-4 sm:flex-row">
-            <a href="#pax-aider" className="inline-flex items-center justify-center gap-2 rounded-full bg-[#f59e0b] px-8 py-4 text-lg font-bold text-[#1e3a8a] shadow-lg shadow-[#f59e0b]/50 transition-all hover:-translate-y-1 hover:bg-[#fbbf24]">
-              📖 Read the Pax Aider
+          <div className="flex flex-col justify-center gap-3 sm:flex-row sm:gap-4">
+            <a href="#pax-aider" className="inline-flex w-full items-center justify-center rounded-full bg-[#f59e0b] px-6 py-4 text-base font-bold text-[#1e3a8a] shadow-lg shadow-[#f59e0b]/50 transition-all hover:-translate-y-1 hover:bg-[#fbbf24] sm:w-auto sm:px-8 sm:text-lg">
+              Read the Pax Aider
             </a>
-            <a href="#communities" className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 bg-white/10 px-8 py-4 text-lg font-bold text-white shadow-lg backdrop-blur-sm transition-all hover:-translate-y-1 hover:bg-white/20">
-              💬 Join a Group
+            <a href="#communities" className="inline-flex w-full items-center justify-center rounded-full border border-white/20 bg-white/10 px-6 py-4 text-base font-bold text-white shadow-lg backdrop-blur-sm transition-all hover:-translate-y-1 hover:bg-white/20 sm:w-auto sm:px-8 sm:text-lg">
+              Join a Group
             </a>
           </div>
         </div>
       </header>
 
-      <section id="pax-aider" className="relative bg-white py-24">
+      <section id="pax-aider" className="relative bg-white py-16 sm:py-20 lg:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mb-12 text-center">
             <h2 className="mb-4 text-3xl font-bold text-[#1e3a8a] md:text-4xl">The Pax Aider</h2>
             <p className="mx-auto max-w-2xl text-slate-600">Your ultimate survival guide to academic, social, and spiritual life at KNUST. Read it online or download it for later.</p>
           </div>
 
-          <div className="flex min-h-[600px] flex-col overflow-hidden rounded-3xl border border-slate-100 bg-slate-50 shadow-xl lg:flex-row">
+          <div className="flex flex-col overflow-hidden rounded-3xl border border-slate-100 bg-slate-50 shadow-xl lg:min-h-[600px] lg:flex-row">
             <div className="flex w-full flex-col border-r border-slate-200 bg-white lg:w-1/3">
-              <div className="flex items-center justify-between border-b border-slate-100 bg-slate-50/50 p-6">
+              <div className="flex flex-col items-stretch gap-3 border-b border-slate-100 bg-slate-50/50 p-4 sm:flex-row sm:items-center sm:justify-between sm:p-6">
                 <h3 className="text-lg font-bold text-slate-800">
                   <span className="mr-2 text-[#1d4ed8]">☰</span> Contents
                 </h3>
-                <button type="button" onClick={handleDownload} className="flex items-center gap-2 rounded-lg bg-slate-200 px-3 py-1.5 text-sm font-medium text-slate-700 transition-colors hover:bg-slate-300">
+                <button type="button" onClick={handleDownload} className="flex items-center justify-center gap-2 rounded-lg bg-slate-200 px-3 py-2 text-sm font-medium text-slate-700 transition-colors hover:bg-slate-300 sm:shrink-0">
                   ⬇ Download Pax Aider PDF
                 </button>
               </div>
@@ -363,7 +363,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="reader-scroll relative h-[500px] w-full overflow-y-auto bg-white p-6 md:p-10 lg:h-auto lg:w-2/3">
+            <div className="reader-scroll relative h-[55vh] min-h-[360px] max-h-[600px] w-full overflow-y-auto bg-white p-5 sm:h-[500px] sm:p-8 lg:h-auto lg:w-2/3 lg:p-10">
               <div className="mx-auto w-full max-w-3xl">
                 {chapterContent && (
                   <>
@@ -411,9 +411,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="communities" className="bg-slate-50 py-24">
+      <section id="communities" className="bg-slate-50 py-16 sm:py-20 lg:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mb-16 text-center">
+          <div className="mb-12 text-center sm:mb-16">
             <span className="text-sm font-bold uppercase tracking-wider text-[#d97706]">Get Involved</span>
             <h2 className="mt-2 mb-4 text-3xl font-bold text-[#1e3a8a] md:text-4xl">Find Your Community</h2>
             <p className="mx-auto max-w-2xl text-slate-600">Explore Pax subgroups and connect with the community.</p>
@@ -434,14 +434,14 @@ export default function Home() {
 
                 <div className="space-y-4 p-6">
                   {card.items.map((item) => (
-                    <div key={item.name} className="flex items-center justify-between rounded-xl p-3 transition-colors hover:bg-slate-50">
+                    <div key={item.name} className="flex items-start justify-between gap-3 rounded-xl p-3 transition-colors hover:bg-slate-50">
                       <div className="min-w-0">
                         <h4 className="break-words font-bold text-slate-800">{item.name}</h4>
                         {item.subtitle && <p className="text-sm text-slate-500">{item.subtitle}</p>}
                       </div>
                       {item.action && (
-                        <button type="button" onClick={() => handleJoinGroup(item.action)} className="flex items-center gap-2 rounded-lg bg-[#25D366] px-4 py-2 font-semibold text-white shadow-sm transition-transform hover:scale-105 hover:bg-[#1da851]">
-                          💬 Join
+                        <button type="button" onClick={() => handleJoinGroup(item.action)} className="shrink-0 rounded-lg bg-[#25D366] px-4 py-2 font-semibold text-white shadow-sm transition-colors hover:bg-[#1da851]">
+                          Join
                         </button>
                       )}
                     </div>
