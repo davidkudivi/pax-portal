@@ -4,126 +4,196 @@ import { useEffect, useState } from 'react';
 
 const paxAiderData = [
   {
-    id: 'welcome',
-    title: '1. Welcome to KNUST',
-    icon: 'fa-hand-wave',
+    id: 'about',
+    title: '1. About Pax Romana',
+    icon: 'fa-circle-info',
     content: {
-      heading: 'Welcome to Campus!',
+      heading: 'About Pax Romana',
       paragraphs: [
-        'Dear Freshman, welcome to the Kwame Nkrumah University of Science and Technology. Your admission is a testament to your hard work, and we at Pax Romana share in your joy.',
-        'University life is exciting but can also be daunting. This handbook is designed to help you navigate your new environment smoothly. Pax Romana is your family away from home, ready to support you spiritually, academically, and socially.',
+        'PAX ROMANA which simply means Peace from Rome. It is an International Movement of Catholic Students in tertiary institutions. It currently exists in about 80 countries worldwide and most tertiary institutions in Ghana.',
+        'We have our pax parents, most of whom are lecturers on campus and who are very committed to guiding all students to reach greater heights.',
       ],
-      quote: '“I can do all things through Christ who strengthens me.” - Philippians 4:13',
-    },
-  },
-  {
-    id: 'spiritual',
-    title: '2. Spiritual Life',
-    icon: 'fa-cross',
-    content: {
-      heading: 'Nurturing Your Faith',
-      paragraphs: [
-        'At KNUST, maintaining your spiritual life is paramount. The Catholic Chaplaincy, located behind the Great Hall, is the center of our activities.',
-        'The Sacraments are central to our faith journey, and all students are encouraged to participate actively in Mass, prayer, and community life.',
-      ],
-      list: ['Holy Mass: Refer to the schedule section for timings. Attendance is highly encouraged.', 'Confession: Priests are usually available before Masses or by appointment at the Chaplaincy office.'],
-    },
-  },
-  {
-    id: 'academic',
-    title: '3. Academic Excellence',
-    icon: 'fa-book',
-    content: {
-      heading: 'Pursuing Knowledge',
-      paragraphs: ['You are here primarily to study. Time management is your greatest asset.'],
-      cards: [
-        { title: 'Study Spaces', text: 'The Main Library, College libraries, and designated study rooms in halls are excellent quiet places.' },
-        { title: 'Group Studies', text: 'Join your College Pax groups to find seniors and peers for study discussions and past questions.' },
-      ],
-    },
-  },
-  {
-    id: 'campus',
-    title: '4. Navigating Campus',
-    icon: 'fa-map-location-dot',
-    content: {
-      heading: 'Getting Around KNUST',
-      paragraphs: ['KNUST is vast, but you will soon get used to it. The campus shuttles are a convenient way to move around.'],
       list: [
-        { title: 'Commercial Area', text: 'Your hub for banks, food, printing, and the post office.' },
-        { title: 'Security', text: 'Always carry your Student ID. Avoid walking alone in obscure paths late at night. Save the campus security numbers on your phone.' },
+        'Vision: That Christ may be in all',
+        'Motto: Liberation for peace',
+        'We have a Chaplaincy (church) — Our Lady of the Holy Rosary Catholic Chaplaincy — here on campus where students, pax parents, and other workers come together to worship.',
       ],
+    },
+  },
+  {
+    id: 'message',
+    title: '2. Message from the Pax Council',
+    icon: 'fa-envelope-open-text',
+    content: {
+      heading: 'Message From the Pax Council',
+      paragraphs: [
+        'On behalf of all Catholic Students of KNUST, I congratulate you on your admission into this noble University.',
+        'You are highly welcome in the name of our Lord Jesus Christ to this beautiful Pax Family. It is our greatest pleasure to help you settle down on campus and to guide you with your academic and spiritual life. We have long waited for your coming and Praise God you are here with us.',
+        'Have a fruitful stay here and may the good and gracious Lord bless you and be with you. We are always willing and ready to help you!',
+      ],
+    },
+  },
+  {
+    id: 'subgroups',
+    title: '3. Pax Sub Groups',
+    icon: 'fa-people-group',
+    content: {
+      heading: 'Pax Romana Sub Groups',
+      list: [
+        'Catholic Charismatic Renewal (ITI-CCR)',
+        'English Lectors Ministry',
+        'Legion of Mary',
+        'Knights and Ladies of the Blessed Sacrament (KLBS)/Mass Servers',
+        'Sacred Heart of Jesus',
+        'TESMAG (Student Marshallans Association)',
+        'Pax Choir',
+        'Organising and Technical Ministry (Organa)',
+        'Ushering Ministry',
+        'Visitation Ministry',
+        'Catholic Youth Organisation (CYO)',
+        'GATEs-KSJI (Student Members of St. John International)',
+      ],
+    },
+  },
+  {
+    id: 'programs',
+    title: '4. Regular Pax Programs',
+    icon: 'fa-calendar-check',
+    content: {
+      heading: 'Regular Pax Programs',
+      list: [
+        'Students Mass @ 6:30pm every Tuesday',
+        'Dawn Rosary Prayers @ varying times, every Thursday in Halls/Hostels of Residence',
+        'Cell Meetings @ varying times, every Saturday in Halls/Hostels of Residence',
+        'Note: There are Daily Masses every week',
+      ],
+    },
+  },
+  {
+    id: 'orientation',
+    title: '5. Watch Out! Freshers Orientation',
+    icon: 'fa-bullhorn',
+    content: {
+      heading: 'Freshers Orientation',
+      paragraphs: [
+        'Date: Sunday, 18th October, 2026.',
+        'Time: 8:00 am',
+        'Venue: Our Lady of the Holy Rosary Catholic Chaplaincy',
+        'Freshers meet Pax Parents: After 8:00am mass @ Chaplaincy',
+      ],
+    },
+  },
+  {
+    id: 'security',
+    title: '6. Security Tips on Campus',
+    icon: 'fa-shield-halved',
+    content: {
+      heading: 'Security Tips on Campus',
+      list: [
+        'Don’t walk alone in unsafe areas — avoid dark, bushy, isolated places and unsafe shortcuts, especially at night.',
+        'Move in groups when possible — walk with course mates, roommates, or fellow Catholic students, particularly after evening activities.',
+        'Keep your room secured — lock your door whenever you leave or sleep, even if you’ll only be away briefly.',
+        'Protect your keys — never hide keys under mats or flower pots. Report lost keys, damaged locks, or suspicious access immediately to your Hall/Hostel authorities.',
+        'Use safer transport — prefer KNUST-identified/embossed taxis and shuttles. Avoid suspicious drivers or isolated pickup points.',
+        'Be alert when travelling — note the vehicle’s registration number, travel with others where possible, and keep your phone, wallet and valuables safely inside your bag.',
+        'Don’t carry unnecessary cash — keep physical money to a minimum and avoid openly displaying valuables.',
+        'Protect yourself during an attack — if confronted by armed robbers, do not resist or fight back. Cooperate and prioritise your life.',
+        'Be security-conscious around vehicles — park only in designated/well-lit areas, keep valuables hidden, lock your doors, and report suspicious people to security.',
+        'Prevent fires — don’t overload sockets or extension boards; switch off cookers and appliances after use, unplug when appropriate, and keep candles/mosquito coils away from anything flammable.',
+      ],
+      quote: 'KNUST Security: 050 134 7350 / 050 134 7352',
+    },
+  },
+  {
+    id: 'contacts',
+    title: '7. Help Lines & Contacts',
+    icon: 'fa-phone',
+    content: {
+      heading: 'Contacts',
+      paragraphs: [
+        'Pax! Peace! ... Thumbs up! For Jesus!',
+        'For Help call:',
+      ],
+      list: [
+        'Emmanuel — 0207153767',
+        'Eugene — 0534654904',
+        'David — 0542384187',
+        'Email: paxromanaknustlocal@gmail.com',
+      ],
+      quote: 'KNUST Police: 0322 060 357 | Police Information Room: 0322 022 323 | Ghana National Fire Service: 192 / 112 | KNUST Fire Station: 0322 392 292',
     },
   },
 ];
 
 const communityCards = [
   {
-    title: 'Ministries & Choirs',
-    icon: 'fa-music',
+    title: 'Pax Sub Groups',
+    icon: 'fa-people-group',
     items: [
-      { name: 'Pax Choir', subtitle: 'Singing to the glory of God', action: 'Pax Choir' },
-      { name: 'Lectors Ministry', subtitle: 'Proclaiming the Word', action: 'Lectors' },
-      { name: 'Mass Servers', subtitle: 'Serving at the Altar', action: 'Mass Servers' },
+      { name: 'Catholic Charismatic Renewal', subtitle: 'ITI-CCR', action: 'Catholic Charismatic Renewal' },
+      { name: 'English Lectors Ministry', subtitle: 'Public reading & proclamation', action: 'English Lectors Ministry' },
+      { name: 'Legion of Mary', subtitle: 'Evangelisation & prayer', action: 'Legion of Mary' },
+      { name: 'Mass Servers', subtitle: 'KLBS / Blessed Sacrament', action: 'Mass Servers' },
     ],
   },
   {
-    title: 'Pious Societies',
-    icon: 'fa-hands-praying',
+    title: 'Pax Programs',
+    icon: 'fa-calendar-check',
     items: [
-      { name: 'Charismatic (CCRS)', subtitle: 'Prayer and praise', action: 'CCRS' },
-      { name: 'Legion of Mary', subtitle: 'To Jesus through Mary', action: 'Legion of Mary' },
-      { name: 'St. Vincent de Paul', subtitle: 'Charity and outreach', action: 'St Vincent' },
+      { name: 'Students Mass', subtitle: 'Every Tuesday, 6:30pm', action: 'Students Mass' },
+      { name: 'Dawn Rosary', subtitle: 'Thursday in halls/hostels', action: 'Dawn Rosary' },
+      { name: 'Cell Meetings', subtitle: 'Saturday in halls/hostels', action: 'Cell Meetings' },
     ],
   },
   {
-    title: 'Academic Groups',
-    icon: 'fa-graduation-cap',
+    title: 'Orientation & Support',
+    icon: 'fa-bullhorn',
     items: [
-      { name: 'College of Engineering', subtitle: 'Study groups & tips', action: 'Engineering' },
-      { name: 'Health Sciences', subtitle: 'CHS students support', action: 'Health Sciences' },
-      { name: 'Humanities & Social Sci.', subtitle: 'CASS students networking', action: 'CASS' },
+      { name: 'Freshers Orientation', subtitle: 'Sunday, 18th October, 2026', action: 'Freshers Orientation' },
+      { name: 'Pax Parents Meet-Up', subtitle: 'After 8:00am Mass', action: 'Pax Parents' },
+      { name: 'Chaplaincy Support', subtitle: 'Our Lady of the Holy Rosary', action: 'Chaplaincy Support' },
     ],
   },
   {
-    title: 'Halls & Hostels',
-    icon: 'fa-building',
+    title: 'Safety & Contacts',
+    icon: 'fa-shield-halved',
     items: [
-      { name: 'Republic / Indece / Unity', subtitle: 'Traditional Halls Pax', action: 'Traditional Halls' },
-      { name: 'Ayeduase Hostels', subtitle: 'Off-campus community', action: 'Ayeduase' },
-      { name: 'Bomso / Kotei Hostels', subtitle: 'Off-campus community', action: 'Bomso' },
+      { name: 'Campus Security', subtitle: '050 134 7350 / 050 134 7352', action: 'Campus Security' },
+      { name: 'KNUST Police', subtitle: '0322 060 357', action: 'KNUST Police' },
+      { name: 'Pax Help Lines', subtitle: 'Emmanuel / Eugene / David', action: 'Pax Help Lines' },
     ],
   },
 ];
 
 const scheduleCards = [
   {
-    heading: 'Sunday Masses',
+    heading: 'Students Mass',
     accent: 'bg-paxGold-500 text-white',
     icon: 'fa-church',
     items: [
-      { label: '1st Mass (English)', time: '6:30 AM' },
-      { label: '2nd Mass (English)', time: '8:30 AM' },
-      { label: '3rd Mass (Akan)', time: '10:30 AM' },
+      { label: 'Day', time: 'Every Tuesday' },
+      { label: 'Time', time: '6:30pm' },
+      { label: 'Venue', time: 'Chaplaincy' },
     ],
   },
   {
-    heading: 'Weekday & Adoration',
+    heading: 'Dawn Rosary',
     accent: 'bg-paxBlue-700 text-white',
     icon: 'fa-sun',
     items: [
-      { label: 'Mon - Fri Masses', time: '6:00 AM & 6:00 PM' },
-      { label: 'Saturday Mass', time: '6:30 AM' },
-      { label: 'Thursday Adoration', time: '6:30 PM - 8:00 PM' },
+      { label: 'Day', time: 'Every Thursday' },
+      { label: 'Time', time: 'Varying times' },
+      { label: 'Venue', time: 'Halls / Hostels' },
     ],
   },
   {
-    heading: 'Meetings',
+    heading: 'Freshers Orientation',
     accent: 'bg-green-500 text-white',
-    icon: 'fa-users',
+    icon: 'fa-bullhorn',
     items: [
-      { label: 'General Meeting', time: 'Fridays at 6:30 PM', extra: 'Chaplaincy Auditorium' },
-      { label: 'Freshmen Orientation', time: 'Check WhatsApp for dates' },
+      { label: 'Date', time: 'Sunday, 18th October, 2026' },
+      { label: 'Time', time: '8:00am' },
+      { label: 'Venue', time: 'Our Lady of the Holy Rosary Catholic Chaplaincy' },
     ],
   },
 ];
@@ -154,7 +224,10 @@ export default function Home() {
   };
 
   const handleDownload = () => {
-    openModal('Download Initiated', 'The full PDF version of the Pax Aider is currently being generated. This feature will download the official freshers guide directly to your device.');
+    openModal('Save as PDF', 'Your browser print dialog will open. Choose “Save as PDF” to download the Pax Aider as a PDF file.');
+    setTimeout(() => {
+      window.print();
+    }, 250);
   };
 
   const handleJoinGroup = (groupName) => {
