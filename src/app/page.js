@@ -166,9 +166,11 @@ const communityCards = [
     title: 'Safety & Contacts',
     icon: 'fa-shield-halved',
     items: [
-      { name: 'Campus Security', subtitle: '050 134 7350 / 050 134 7352', action: 'Campus Security' },
-      { name: 'KNUST Police', subtitle: '0322 060 357', action: 'KNUST Police' },
-      { name: 'Pax Help Lines', subtitle: 'Emmanuel / Eugene / David', action: 'Pax Help Lines' },
+      { name: 'Campus Security', subtitle: '050 134 7350 / 050 134 7352', phone: '0501347350' },
+      { name: 'KNUST Police', subtitle: '0322 060 357', phone: '0322060357' },
+      { name: 'Emmanuel', subtitle: 'Pax Help Line · 020 715 3767', phone: '0207153767' },
+      { name: 'Eugene', subtitle: 'Pax Help Line · 053 465 4904', phone: '0534654904' },
+      { name: 'David', subtitle: 'Pax Help Line · 054 238 4187', phone: '0542384187' },
     ],
   },
 ];
@@ -439,7 +441,11 @@ export default function Home() {
                         <h4 className="break-words font-bold text-slate-800">{item.name}</h4>
                         {item.subtitle && <p className="text-sm text-slate-500">{item.subtitle}</p>}
                       </div>
-                      {item.action && (
+                      {item.phone ? (
+                        <a href={`tel:${item.phone}`} aria-label={`Call ${item.name} at ${item.phone}`} className="shrink-0 rounded-lg bg-[#25D366] px-4 py-2 text-center font-semibold text-white shadow-sm transition-colors hover:bg-[#1da851] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1e40af]">
+                          Call
+                        </a>
+                      ) : item.action && (
                         <button type="button" onClick={() => handleJoinGroup(item.action)} className="shrink-0 rounded-lg bg-[#25D366] px-4 py-2 font-semibold text-white shadow-sm transition-colors hover:bg-[#1da851]">
                           Join
                         </button>
