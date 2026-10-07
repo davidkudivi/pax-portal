@@ -35,10 +35,10 @@ const paxAiderData = [
   },
   {
     id: 'subgroups',
-    title: '3. Pax Sub Groups',
+    title: '3. Sub-Groups',
     icon: 'fa-people-group',
     content: {
-      heading: 'Pax Romana Sub Groups',
+      heading: 'Sub-Groups',
       list: [
         'Catholic Charismatic Renewal (ITI-CCR)',
         'English Lectors Ministry',
@@ -127,7 +127,7 @@ const paxAiderData = [
 
 const communityCards = [
   {
-    title: 'Pax Sub Groups',
+    title: 'Sub-Groups',
     icon: 'fa-people-group',
     items: [
       { name: 'Catholic Charismatic Renewal (ITI-CCR)', action: 'Catholic Charismatic Renewal' },
@@ -145,11 +145,6 @@ const communityCards = [
     ],
   },
   {
-    title: 'Pax Programs',
-    icon: 'fa-calendar-check',
-    items: [],
-  },
-  {
     title: 'Safety & Contacts',
     icon: 'fa-shield-halved',
     items: [
@@ -159,6 +154,62 @@ const communityCards = [
       { name: 'Eugene', subtitle: 'Pax Help Line · 053 465 4904', phone: '0534654904' },
       { name: 'David', subtitle: 'Pax Help Line · 054 238 4187', phone: '0542384187' },
     ],
+  },
+  {
+    title: 'Pax Programs',
+    icon: 'fa-calendar-check',
+    months: [
+      {
+        name: 'October 2026',
+        events: [
+          { name: 'Freshers Day', date: 'Sunday, 18th' },
+          { name: 'Rosary Month Climax', date: 'Saturday, 31st' },
+        ],
+      },
+      {
+        name: 'November 2026',
+        events: [
+          { name: 'Akwaaba Night', date: 'Friday, 6th' },
+          { name: 'Freshers Takeover Mass', date: 'Tuesday, 10th' },
+          { name: 'Pax Fair 2.0', date: 'Sunday, 22nd' },
+          { name: 'Pax Ladies and Gents Week', date: 'Sunday, 22nd to Saturday, 28th' },
+        ],
+      },
+      {
+        name: 'December 2026',
+        events: [
+          { name: 'Pax CleanUp', date: 'Saturday, 5th' },
+          { name: 'Carols Night', date: 'Friday, 18th' },
+        ],
+      },
+      {
+        name: 'January 2027',
+        events: [
+          { name: 'Pax Games', date: 'Saturday, 16th' },
+          { name: 'Colours of Pax / Joy In Colour', date: 'Sunday, 17th' },
+          { name: 'Exams Prayer Night', date: 'Friday, 22nd' },
+        ],
+      },
+    ],
+  },
+];
+
+const importantDates = [
+  {
+    name: 'Matriculation',
+    date: 'Friday, 13th November, 2026 to Saturday, 14th November, 2026',
+  },
+  {
+    name: 'Mid-Semester Exams',
+    date: 'Monday, 14th December, 2026 to Friday, 18th December, 2026',
+  },
+  {
+    name: 'Christmas Break',
+    date: 'Saturday, 19th December, 2026 to Sunday, 3rd January, 2027',
+  },
+  {
+    name: 'First Semester Examinations',
+    date: 'Monday, 25th January, 2027 to Friday, 12th February, 2027',
   },
 ];
 
@@ -410,7 +461,7 @@ export default function Home() {
 
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
             {communityCards.map((card) => (
-              <div key={card.title} className="overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-md transition-shadow hover:shadow-xl">
+              <div key={card.title} className={`overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-md transition-shadow hover:shadow-xl ${card.months ? 'md:col-span-2' : ''}`}>
                 <div className="flex items-center gap-4 bg-[#1e40af] p-6">
                   <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white/20 text-xl text-white">
                     {card.icon === 'fa-music' && '♫'}
@@ -421,28 +472,63 @@ export default function Home() {
                   <h3 className="text-2xl font-bold text-white">{card.title}</h3>
                 </div>
 
-                <div className="space-y-4 p-6">
-                  {card.items.map((item) => (
-                    <div key={item.name} className="flex items-start justify-between gap-3 rounded-xl p-3 transition-colors hover:bg-slate-50">
-                      <div className="min-w-0">
-                        <h4 className="break-words font-bold text-slate-800">{item.name}</h4>
-                        {item.subtitle && <p className="text-sm text-slate-500">{item.subtitle}</p>}
+                {card.months ? (
+                  <div className="grid gap-6 p-5 sm:grid-cols-2 sm:p-6 xl:grid-cols-4">
+                    {card.months.map((month) => (
+                      <div key={month.name} className="min-w-0">
+                        <h4 className="mb-4 border-b border-slate-200 pb-2 text-lg font-bold text-[#1e3a8a]">{month.name}</h4>
+                        <ul className="space-y-4">
+                          {month.events.map((event) => (
+                            <li key={event.name} className="border-l-2 border-[#f59e0b] pl-3">
+                              <p className="break-words font-semibold text-slate-800">{event.name}</p>
+                              <p className="mt-1 text-sm leading-relaxed text-slate-500">{event.date}</p>
+                            </li>
+                          ))}
+                        </ul>
                       </div>
-                      {item.phone ? (
-                        <a href={`tel:${item.phone}`} aria-label={`Call ${item.name} at ${item.phone}`} className="shrink-0 rounded-lg bg-[#25D366] px-4 py-2 text-center font-semibold text-white shadow-sm transition-colors hover:bg-[#1da851] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1e40af]">
-                          Call
-                        </a>
-                      ) : item.action && (
-                        <button type="button" onClick={() => handleJoinGroup(item.action)} className="shrink-0 rounded-lg bg-[#25D366] px-4 py-2 font-semibold text-white shadow-sm transition-colors hover:bg-[#1da851]">
-                          Join
-                        </button>
-                      )}
-                    </div>
-                  ))}
-                </div>
+                    ))}
+                  </div>
+                ) : (
+                  <div className="space-y-4 p-6">
+                    {card.items.map((item) => (
+                      <div key={item.name} className="flex items-start justify-between gap-3 rounded-xl p-3 transition-colors hover:bg-slate-50">
+                        <div className="min-w-0">
+                          <h4 className="break-words font-bold text-slate-800">{item.name}</h4>
+                          {item.subtitle && <p className="text-sm text-slate-500">{item.subtitle}</p>}
+                        </div>
+                        {item.phone ? (
+                          <a href={`tel:${item.phone}`} aria-label={`Call ${item.name} at ${item.phone}`} className="shrink-0 rounded-lg bg-[#25D366] px-4 py-2 text-center font-semibold text-white shadow-sm transition-colors hover:bg-[#1da851] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1e40af]">
+                            Call
+                          </a>
+                        ) : item.action && (
+                          <button type="button" onClick={() => handleJoinGroup(item.action)} className="shrink-0 rounded-lg bg-[#25D366] px-4 py-2 font-semibold text-white shadow-sm transition-colors hover:bg-[#1da851]">
+                            Join
+                          </button>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                )}
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section id="important-dates" className="bg-[#153e39] py-16 text-white sm:py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mb-10 max-w-3xl">
+            <span className="text-sm font-bold uppercase tracking-wider text-[#fbbf24]">Semester Calendar</span>
+            <h2 className="mt-2 text-3xl font-extrabold leading-tight uppercase sm:text-4xl">IMPORTANT DATES TO TAKE NOTE OF</h2>
+          </div>
+          <ul className="grid gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
+            {importantDates.map((date) => (
+              <li key={date.name} className="min-w-0 border-t border-white/30 pt-5">
+                <h3 className="mb-3 text-lg font-bold text-[#fbbf24]">{date.name}</h3>
+                <p className="text-sm leading-relaxed text-emerald-50">{date.date}</p>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 
