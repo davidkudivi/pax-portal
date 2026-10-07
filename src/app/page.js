@@ -224,10 +224,12 @@ export default function Home() {
   };
 
   const handleDownload = () => {
-    openModal('Save as PDF', 'Your browser print dialog will open. Choose “Save as PDF” to download the Pax Aider as a PDF file.');
-    setTimeout(() => {
-      window.print();
-    }, 250);
+    const link = document.createElement('a');
+    link.href = '/pax-aider.pdf';
+    link.download = 'pax-aider.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   const handleJoinGroup = (groupName) => {
