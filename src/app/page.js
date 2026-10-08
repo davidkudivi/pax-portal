@@ -132,7 +132,11 @@ const communityCards = [
     title: 'Sub-Groups',
     icon: 'fa-people-group',
     items: [
-      { name: 'Catholic Charismatic Renewal (ITI-CCR)', action: 'Catholic Charismatic Renewal' },
+      {
+        name: 'Catholic Charismatic Renewal (ITI-CCR)',
+        action: 'Catholic Charismatic Renewal',
+        aboutMessage: 'WELCOME TO A COMMUNITY OF INTENSE PRAYER AND SACRIFICE, READY?',
+      },
       { name: 'English Lectors Ministry' },
       { name: 'Legion of Mary' },
       { name: 'Knights and Ladies of the Blessed Sacrament (KLBS)/Mass Servers' },
@@ -506,15 +510,22 @@ export default function Home() {
                           <h4 className="break-words font-bold text-slate-800">{item.name}</h4>
                           {item.subtitle && <p className="text-sm text-slate-500">{item.subtitle}</p>}
                         </div>
-                        {item.phone ? (
-                          <a href={`tel:${item.phone}`} aria-label={`Call ${item.name} at ${item.phone}`} className="shrink-0 rounded-lg bg-[#25D366] px-4 py-2 text-center font-semibold text-white shadow-sm transition-colors hover:bg-[#1da851] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1e40af]">
-                            Call
-                          </a>
-                        ) : item.action && (
-                          <button type="button" onClick={() => handleJoinGroup(item.action)} className="shrink-0 rounded-lg bg-[#25D366] px-4 py-2 font-semibold text-white shadow-sm transition-colors hover:bg-[#1da851]">
-                            Join
-                          </button>
-                        )}
+                        <div className="flex shrink-0 items-center gap-2">
+                          {item.aboutMessage && (
+                            <button type="button" onClick={() => openModal(item.name, item.aboutMessage)} className="rounded-lg border border-slate-300 bg-white px-3 py-2 font-semibold text-slate-700 transition-colors hover:bg-slate-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1e40af]">
+                              About
+                            </button>
+                          )}
+                          {item.phone ? (
+                            <a href={`tel:${item.phone}`} aria-label={`Call ${item.name} at ${item.phone}`} className="rounded-lg bg-[#25D366] px-4 py-2 text-center font-semibold text-white shadow-sm transition-colors hover:bg-[#1da851] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1e40af]">
+                              Call
+                            </a>
+                          ) : item.action && (
+                            <button type="button" onClick={() => handleJoinGroup(item.action)} className="rounded-lg bg-[#25D366] px-4 py-2 font-semibold text-white shadow-sm transition-colors hover:bg-[#1da851] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1e40af]">
+                              Join
+                            </button>
+                          )}
+                        </div>
                       </div>
                     ))}
                   </div>
