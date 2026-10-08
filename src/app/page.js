@@ -140,6 +140,7 @@ const communityCards = [
       {
         name: "English Lectors' Ministry",
         aboutMessage: "A ministry dedicated to proclaiming the Word of God during Mass and other liturgical celebrations.\n\nMeeting Day & Time: Wednesday, 5:30 PM",
+        aboutImage: '/Lectors.jpg',
         joinUrl: 'https://chat.whatsapp.com/C27tzZxKLd4AzL22Me71pg?mode=gi_t',
       },
       {
@@ -147,12 +148,26 @@ const communityCards = [
         action: 'Catholic Charismatic Renewal',
       },
       { name: 'Knights and Ladies of the Blessed Sacrament (KLBS)/Mass Servers' },
-      { name: 'Sacred Heart of Jesus' },
+      {
+        name: 'Sacred Heart of Jesus',
+        aboutImage: '/SacredHeart.jpg',
+        aboutMessage: 'The Sacred Heart of Jesus Confraternity is a Catholic lay association dedicated to venerating and spreading devotion to the Sacred Heart of Jesus. We focus on Christ’s boundless love, compassion, and redemptive mercy for humanity.\n\nThe aim of the society is to help members grow in personal holiness and prayer.',
+        joinUrl: 'https://chat.whatsapp.com/FzsegnqagufCCnmUhLLJS7',
+      },
       { name: 'TESMAG (Student Marshallans Association)' },
-      { name: 'Pax Choir' },
+      {
+        name: 'Pax Choir',
+        aboutMessage: 'A ministering body that makes Christ known to His people and touches them through music and song ministrations.\n\nMeeting Day & Time: Every Wednesday and Friday at 6 PM, and Saturdays at 4 PM.',
+        joinUrl: 'https://chat.whatsapp.com/KEZW7a2erTkE53HnUxLJLs',
+      },
       { name: 'Organising and Technical Ministry (Organa)' },
       { name: 'Ushering Ministry' },
-      { name: 'Visitation Ministry' },
+      {
+        name: 'Visitation Ministry',
+        aboutImage: '/Visitation.jpg',
+        aboutMessage: 'We’re a family committed to visiting and spreading the love of God to Pax members in the various halls and hostels.\n\nMeeting Day & Time: Saturday at 6:30 PM\n\n“Bear one another’s burdens, and so fulfill the law of Christ.” — Galatians 6:2.',
+        joinUrl: 'https://chat.whatsapp.com/Bnt6wAGqWmjLYu9RPUosRn',
+      },
       { name: 'Catholic Youth Organisation (CYO)' },
       { name: 'GATEs-KSJI (Student Members of St. John International)' },
     ],
@@ -262,7 +277,7 @@ const scheduleCards = [
 export default function Home() {
   const [activeChapter, setActiveChapter] = useState('about');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [modal, setModal] = useState({ open: false, title: '', message: '' });
+  const [modal, setModal] = useState({ open: false, title: '', message: '', image: '' });
 
   useEffect(() => {
     const handleScroll = () => {
@@ -276,8 +291,8 @@ export default function Home() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const openModal = (title, message) => {
-    setModal({ open: true, title, message });
+  const openModal = (title, message, image = '') => {
+    setModal({ open: true, title, message, image });
   };
 
   const closeModal = () => {
@@ -519,7 +534,7 @@ export default function Home() {
                         </div>
                         {card.title === 'Sub-Groups' ? (
                           <div className="flex shrink-0 items-center gap-2">
-                            <button type="button" onClick={() => openModal(item.name, item.aboutMessage || `Information about ${item.name} will be added soon.`)} className="rounded-lg border border-slate-300 bg-white px-3 py-2 font-semibold text-slate-700 transition-colors hover:bg-slate-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1e40af]">
+                            <button type="button" onClick={() => openModal(item.name, item.aboutMessage || `Information about ${item.name} will be added soon.`, item.aboutImage)} className="rounded-lg border border-slate-300 bg-white px-3 py-2 font-semibold text-slate-700 transition-colors hover:bg-slate-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1e40af]">
                               About
                             </button>
                             <button type="button" onClick={() => handleJoinGroup(item.action || item.name, item.joinUrl)} className="rounded-lg bg-[#25D366] px-4 py-2 font-semibold text-white shadow-sm transition-colors hover:bg-[#1da851] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1e40af]">
@@ -622,9 +637,13 @@ export default function Home() {
         <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/50 px-4 backdrop-blur-sm">
           <div className="w-full max-w-sm rounded-2xl bg-white p-6 shadow-2xl">
             <div className="text-center">
-              <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-[#dbeafe] text-2xl text-[#1d4ed8]">
-                ℹ
-              </div>
+              {modal.image ? (
+                <Image src={modal.image} alt={`${modal.title} emblem`} width={160} height={160} className="mx-auto mb-4 h-32 w-32 rounded-lg border border-slate-200 bg-white object-contain p-1" />
+              ) : (
+                <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-[#dbeafe] text-2xl text-[#1d4ed8]">
+                  ℹ
+                </div>
+              )}
               <h3 className="mb-2 text-lg font-bold text-slate-800">{modal.title}</h3>
               <p className="mb-6 whitespace-pre-line text-slate-600">{modal.message}</p>
               <button type="button" onClick={closeModal} className="w-full rounded-xl bg-[#1e40af] py-3 font-semibold text-white transition-colors hover:bg-[#1e3a8a]">
