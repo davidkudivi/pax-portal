@@ -151,7 +151,7 @@ const communityCards = [
       {
         name: 'Sacred Heart of Jesus',
         aboutImage: '/SacredHeart.jpg',
-        aboutMessage: 'The Sacred Heart of Jesus Confraternity is a Catholic lay association dedicated to venerating and spreading devotion to the Sacred Heart of Jesus. We focus on Christ’s boundless love, compassion, and redemptive mercy for humanity.\n\nThe aim of the society is to help members grow in personal holiness and prayer.',
+        aboutMessage: 'The Sacred Heart of Jesus Confraternity is a Catholic lay association dedicated to venerating and spreading devotion to the Sacred Heart of Jesus. We focus on Christ’s boundless love, compassion, and redemptive mercy for humanity.\n\nThe aim of the society is to help members grow in personal holiness and prayer.\n\nMeeting Day & Time: Fridays at 6:00 PM.',
         joinUrl: 'https://chat.whatsapp.com/FzsegnqagufCCnmUhLLJS7',
       },
       { name: 'TESMAG (Student Marshallans Association)' },
@@ -638,7 +638,7 @@ export default function Home() {
           <div className="w-full max-w-sm rounded-2xl bg-white p-6 shadow-2xl">
             <div className="text-center">
               {modal.image ? (
-                <Image src={modal.image} alt={`${modal.title} emblem`} width={160} height={160} className="mx-auto mb-4 h-32 w-32 rounded-lg border border-slate-200 bg-white object-contain p-1" />
+                <Image src={modal.image} alt={`${modal.title} emblem`} width={160} height={160} className="mx-auto mb-4 h-32 w-32 rounded-2xl border border-slate-200 bg-white object-contain p-1" />
               ) : (
                 <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-[#dbeafe] text-2xl text-[#1d4ed8]">
                   ℹ
