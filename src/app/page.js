@@ -42,9 +42,9 @@ const paxAiderData = [
     content: {
       heading: 'Sub-Groups',
       list: [
-        'Catholic Charismatic Renewal (ITI-CCR)',
-        'English Lectors Ministry',
         'Legion of Mary',
+        "English Lectors' Ministry",
+        'Catholic Charismatic Renewal (ITI-CCR)',
         'Knights and Ladies of the Blessed Sacrament (KLBS)/Mass Servers',
         'Sacred Heart of Jesus',
         'TESMAG (Student Marshallans Association)',
@@ -133,12 +133,19 @@ const communityCards = [
     icon: 'fa-people-group',
     items: [
       {
+        name: 'Legion of Mary',
+        aboutMessage: 'Legion of Mary is a society whose members grow in holiness through prayer and service, visiting the sick, evangelizing, and spreading devotion to Our Lady among Catholic students of our institution.\n\nMeeting Day & Time: Sunday after Second mass',
+        joinUrl: 'https://chat.whatsapp.com/JPbH8hACkXJ7k40AQFTQvn?s=cl&p=a&ilr=4&iam=2',
+      },
+      {
+        name: "English Lectors' Ministry",
+        aboutMessage: "A ministry dedicated to proclaiming the Word of God during Mass and other liturgical celebrations.\n\nMeeting Day & Time: Wednesday, 5:30 PM",
+        joinUrl: 'https://chat.whatsapp.com/C27tzZxKLd4AzL22Me71pg?mode=gi_t',
+      },
+      {
         name: 'Catholic Charismatic Renewal (ITI-CCR)',
         action: 'Catholic Charismatic Renewal',
-        aboutMessage: 'WELCOME TO A COMMUNITY OF INTENSE PRAYER AND SACRIFICE, READY?',
       },
-      { name: 'English Lectors Ministry' },
-      { name: 'Legion of Mary' },
       { name: 'Knights and Ladies of the Blessed Sacrament (KLBS)/Mass Servers' },
       { name: 'Sacred Heart of Jesus' },
       { name: 'TESMAG (Student Marshallans Association)' },
@@ -286,9 +293,9 @@ export default function Home() {
     document.body.removeChild(link);
   };
 
-  const handleJoinGroup = (groupName) => {
-    if (groupName === 'Catholic Charismatic Renewal') {
-      window.open('https://chat.whatsapp.com/Cwd3QvA8GwKJkei85Bwy2F', '_blank', 'noopener,noreferrer');
+  const handleJoinGroup = (groupName, joinUrl) => {
+    if (joinUrl) {
+      window.open(joinUrl, '_blank', 'noopener,noreferrer');
       return;
     }
 
@@ -515,7 +522,7 @@ export default function Home() {
                             <button type="button" onClick={() => openModal(item.name, item.aboutMessage || `Information about ${item.name} will be added soon.`)} className="rounded-lg border border-slate-300 bg-white px-3 py-2 font-semibold text-slate-700 transition-colors hover:bg-slate-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1e40af]">
                               About
                             </button>
-                            <button type="button" onClick={() => handleJoinGroup(item.action || item.name)} className="rounded-lg bg-[#25D366] px-4 py-2 font-semibold text-white shadow-sm transition-colors hover:bg-[#1da851] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1e40af]">
+                            <button type="button" onClick={() => handleJoinGroup(item.action || item.name, item.joinUrl)} className="rounded-lg bg-[#25D366] px-4 py-2 font-semibold text-white shadow-sm transition-colors hover:bg-[#1da851] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1e40af]">
                               Join
                             </button>
                           </div>
@@ -619,7 +626,7 @@ export default function Home() {
                 ℹ
               </div>
               <h3 className="mb-2 text-lg font-bold text-slate-800">{modal.title}</h3>
-              <p className="mb-6 text-slate-600">{modal.message}</p>
+              <p className="mb-6 whitespace-pre-line text-slate-600">{modal.message}</p>
               <button type="button" onClick={closeModal} className="w-full rounded-xl bg-[#1e40af] py-3 font-semibold text-white transition-colors hover:bg-[#1e3a8a]">
                 Understood
               </button>
