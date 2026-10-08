@@ -1,6 +1,8 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
+import { MapPin } from 'lucide-react';
 
 const paxAiderData = [
   {
@@ -62,8 +64,8 @@ const paxAiderData = [
     content: {
       heading: 'Regular Pax Programs',
       list: [
-        'Students Mass @ 6:30pm every Tuesday',
-        'Dawn Rosary Prayers @ varying times, every Thursday in Halls/Hostels of Residence',
+        'Mass for Students @ 6:30pm Tuesday',
+        'Dawn Rosary Prayers @ varying times, Thursday in Halls/Hostels of Residence',
         'Cell Meetings @ varying times, every Saturday in Halls/Hostels of Residence',
         'Note: There are Daily Masses every week',
       ],
@@ -215,13 +217,13 @@ const importantDates = [
 
 const scheduleCards = [
   {
-    heading: 'Students Mass',
+    heading: 'Mass for Students',
     accent: 'bg-paxGold-500 text-white',
     icon: 'fa-church',
     items: [
-      { label: 'Day', time: 'Every Tuesday' },
+      { label: 'Day', time: 'Tuesday' },
       { label: 'Time', time: '6:30pm' },
-      { label: 'Venue', time: 'Chaplaincy' },
+      { label: 'Venue', time: 'Our Lady of the Holy Rosary Catholic Chaplaincy' },
     ],
   },
   {
@@ -229,7 +231,7 @@ const scheduleCards = [
     accent: 'bg-paxBlue-700 text-white',
     icon: 'fa-sun',
     items: [
-      { label: 'Day', time: 'Every Thursday' },
+      { label: 'Day', time: 'Thursday' },
       { label: 'Time', time: 'Varying times' },
       { label: 'Venue', time: 'Halls / Hostels' },
     ],
@@ -298,25 +300,25 @@ export default function Home() {
           <div className="flex cursor-pointer items-center gap-3" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
             <img
               src="/photo_2026-10-07_13-00-05.jpg"
-              alt="Pax Romana KNUST Logo"
+              alt="IMCS Pax Romana KNUST Logo"
               className="h-12 w-12 rounded-full object-cover shadow-md ring-2 ring-[#1e40af]/20"
             />
             <div className="flex flex-col">
-              <span className="text-xl font-bold leading-tight text-[#1e3a8a]">Pax Romana</span>
+              <span className="text-xl font-bold leading-tight text-[#1e3a8a]">IMCS Pax Romana</span>
               <span className="text-[10px] font-semibold tracking-wider text-[#d97706]">KNUST LOCAL</span>
             </div>
           </div>
 
-          <div className="hidden items-center space-x-8 md:flex">
-            <a href="#pax-aider" className="font-medium text-slate-600 transition-colors hover:text-[#1e40af]">The Pax Aider</a>
+          <div className="hidden items-center space-x-8 lg:flex">
+            <a href="#pax-aider" className="font-medium text-slate-600 transition-colors hover:text-[#1e40af]">Pax Aider</a>
             <a href="#communities" className="font-medium text-slate-600 transition-colors hover:text-[#1e40af]">Communities</a>
             <a href="#schedules" className="font-medium text-slate-600 transition-colors hover:text-[#1e40af]">Schedules</a>
             <a href="#communities" className="rounded-full bg-[#1e40af] px-5 py-2.5 font-semibold text-white shadow-md shadow-[#1e40af]/30 transition-all hover:-translate-y-0.5 hover:bg-[#1e3a8a]">
-              Join WhatsApp
+              Join a Sub-group
             </a>
           </div>
 
-          <div className="flex items-center md:hidden">
+          <div className="flex items-center lg:hidden">
             <button
               type="button"
               id="mobile-menu-btn"
@@ -329,9 +331,9 @@ export default function Home() {
         </div>
 
         {isMobileMenuOpen && (
-          <div className="absolute w-full border-t border-slate-100 bg-white shadow-lg md:hidden">
+          <div className="absolute w-full border-t border-slate-100 bg-white shadow-lg lg:hidden">
             <div className="flex flex-col space-y-2 px-4 pb-6 pt-2">
-              <a href="#pax-aider" onClick={() => setIsMobileMenuOpen(false)} className="rounded-md px-3 py-3 text-base font-medium text-slate-700 hover:bg-[#eff6ff] hover:text-[#1e40af]">The Pax Aider</a>
+              <a href="#pax-aider" onClick={() => setIsMobileMenuOpen(false)} className="rounded-md px-3 py-3 text-base font-medium text-slate-700 hover:bg-[#eff6ff] hover:text-[#1e40af]">Pax Aider</a>
               <a href="#communities" onClick={() => setIsMobileMenuOpen(false)} className="rounded-md px-3 py-3 text-base font-medium text-slate-700 hover:bg-[#eff6ff] hover:text-[#1e40af]">Communities</a>
               <a href="#schedules" onClick={() => setIsMobileMenuOpen(false)} className="rounded-md px-3 py-3 text-base font-medium text-slate-700 hover:bg-[#eff6ff] hover:text-[#1e40af]">Schedules</a>
             </div>
@@ -350,14 +352,14 @@ export default function Home() {
         <div className="relative z-10 mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
           <h1 className="mb-6 text-3xl font-extrabold leading-tight tracking-tight text-white sm:text-4xl md:text-5xl lg:text-7xl">
             Welcome Home to <br />
-            <span className="bg-gradient-to-r from-[#fbbf24] to-yellow-200 bg-clip-text text-transparent">Pax Romana KNUST</span>
+            <span className="bg-gradient-to-r from-[#fbbf24] to-yellow-200 bg-clip-text text-transparent">IMCS Pax Romana KNUST</span>
           </h1>
           <p className="mx-auto mb-8 max-w-2xl text-base font-light text-blue-100 sm:mb-10 sm:text-lg md:text-xl">
             Your spiritual family on campus. Discover your community, navigate university life, and grow in faith as a Catholic student.
           </p>
           <div className="flex flex-col justify-center gap-3 sm:flex-row sm:gap-4">
             <a href="#pax-aider" className="inline-flex w-full items-center justify-center rounded-full bg-[#f59e0b] px-6 py-4 text-base font-bold text-[#1e3a8a] shadow-lg shadow-[#f59e0b]/50 transition-all hover:-translate-y-1 hover:bg-[#fbbf24] sm:w-auto sm:px-8 sm:text-lg">
-              Read the Pax Aider
+              Read Pax Aider
             </a>
             <a href="#communities" className="inline-flex w-full items-center justify-center rounded-full border border-white/20 bg-white/10 px-6 py-4 text-base font-bold text-white shadow-lg backdrop-blur-sm transition-all hover:-translate-y-1 hover:bg-white/20 sm:w-auto sm:px-8 sm:text-lg">
               Join a Group
@@ -369,7 +371,7 @@ export default function Home() {
       <section id="pax-aider" className="relative bg-white py-16 sm:py-20 lg:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mb-12 text-center">
-            <h2 className="mb-4 text-3xl font-bold text-[#1e3a8a] md:text-4xl">The Pax Aider</h2>
+            <h2 className="mb-4 text-3xl font-bold text-[#1e3a8a] md:text-4xl">Pax Aider</h2>
             <p className="mx-auto max-w-2xl text-slate-600">Your ultimate survival guide to academic, social, and spiritual life at KNUST. Read it online or download it for later.</p>
           </div>
 
@@ -463,11 +465,19 @@ export default function Home() {
             {communityCards.map((card) => (
               <div key={card.title} className={`overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-md transition-shadow hover:shadow-xl ${card.months ? 'md:col-span-2' : ''}`}>
                 <div className="flex items-center gap-4 bg-[#1e40af] p-6">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white/20 text-xl text-white">
-                    {card.icon === 'fa-music' && '♫'}
-                    {card.icon === 'fa-hands-praying' && '✝'}
-                    {card.icon === 'fa-graduation-cap' && '🎓'}
-                    {card.icon === 'fa-building' && '🏢'}
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center overflow-hidden rounded-full bg-white/20 text-xl text-white">
+                    {card.title === 'Sub-Groups' || card.title === 'Pax Programs' ? (
+                      <Image src="/photo_2026-10-07_13-00-05.jpg" width={48} height={48} alt="" className="h-12 w-12 bg-white object-contain" />
+                    ) : card.title === 'Safety & Contacts' ? (
+                      <Image src="/call.png" width={32} height={32} alt="" className="h-8 w-8 object-contain" />
+                    ) : (
+                      <>
+                        {card.icon === 'fa-music' && '♫'}
+                        {card.icon === 'fa-hands-praying' && '✝'}
+                        {card.icon === 'fa-graduation-cap' && '🎓'}
+                        {card.icon === 'fa-building' && '🏢'}
+                      </>
+                    )}
                   </div>
                   <h3 className="text-2xl font-bold text-white">{card.title}</h3>
                 </div>
@@ -538,8 +548,12 @@ export default function Home() {
 
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mb-16 text-center">
-            <h2 className="mb-4 text-3xl font-bold text-[#1e3a8a] md:text-4xl">Mass & Meeting Schedules</h2>
+            <h2 className="mb-4 text-3xl font-bold text-[#1e3a8a] md:text-4xl">Schedules</h2>
             <p className="mx-auto max-w-2xl text-slate-600">Join us at the Catholic Chaplaincy for spiritual nourishment and community gatherings.</p>
+            <a href="https://maps.app.goo.gl/U1xpPAc5RuCJACDp7" target="_blank" rel="noopener noreferrer" className="mt-6 inline-flex items-center justify-center gap-2 rounded-full bg-[#1e40af] px-6 py-3 font-semibold text-white shadow-md transition-colors hover:bg-[#1e3a8a] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1e40af]">
+              <MapPin aria-hidden="true" className="h-5 w-5" />
+              Find the Church
+            </a>
           </div>
 
           <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
