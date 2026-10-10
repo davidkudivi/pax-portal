@@ -134,6 +134,7 @@ const communityCards = [
     items: [
       {
         name: 'Legion of Mary',
+        aboutImage: '/LegionofMary.jpg',
         aboutMessage: 'Legion of Mary is a society whose members grow in holiness through prayer and service, visiting the sick, evangelizing, and spreading devotion to Our Lady among Catholic students of our institution.\n\nMeeting Day & Time: Sunday after Second mass',
         joinUrl: 'https://chat.whatsapp.com/JPbH8hACkXJ7k40AQFTQvn?s=cl&p=a&ilr=4&iam=2',
       },
@@ -167,6 +168,7 @@ const communityCards = [
       },
       {
         name: 'Pax Choir',
+        aboutImage: '/PaxChoir.jpg',
         aboutMessage: 'A ministering body that makes Christ known to His people and touches them through music and song ministrations.\n\nMeeting Day & Time: Every Wednesday and Friday at 6 PM, and Saturdays at 4 PM.',
         joinUrl: 'https://chat.whatsapp.com/KEZW7a2erTkE53HnUxLJLs',
       },
