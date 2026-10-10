@@ -147,14 +147,24 @@ const communityCards = [
         name: 'Catholic Charismatic Renewal (ITI-CCR)',
         action: 'Catholic Charismatic Renewal',
       },
-      { name: 'Knights and Ladies of the Blessed Sacrament (KLBS)/Mass Servers' },
+      {
+        name: 'Knights and Ladies of the Blessed Sacrament (KLBS)/Mass Servers',
+        aboutImage: '/KLBS.jpg',
+        aboutMessage: 'A group of people who assist the priest and religious during mass and other Liturgical celebrations.\n\nMeeting Day & Time: Saturdays, 3pm at the Main Chapel.',
+        joinUrl: 'https://chat.whatsapp.com/Lj4zSdfbnnI7q4a0G1iUcc?s=cl&p=a&mlu=4&ilr=4',
+      },
       {
         name: 'Sacred Heart of Jesus',
         aboutImage: '/SacredHeart.jpg',
         aboutMessage: 'The Sacred Heart of Jesus Confraternity is a Catholic lay association dedicated to venerating and spreading devotion to the Sacred Heart of Jesus. We focus on Christ’s boundless love, compassion, and redemptive mercy for humanity.\n\nThe aim of the society is to help members grow in personal holiness and prayer.\n\nMeeting Day & Time: Fridays at 6:00 PM.',
         joinUrl: 'https://chat.whatsapp.com/FzsegnqagufCCnmUhLLJS7',
       },
-      { name: 'TESMAG (Student Marshallans Association)' },
+      {
+        name: 'TESMAG (Student Marshallans Association)',
+        aboutImage: '/TESMAG.jpg',
+        aboutMessage: 'TESMAG is a vibrant association for tertiary students in Ghana who are part of the Marshallan family or are interested in becoming Marshallans. We meet once a month to come together, build meaningful connections, grow in faith and character, and learn more about the Marshallan way of life. Our meetings are open to both Marshallans and non-Marshallans who wish to join and become part of the family.',
+        joinUrl: 'https://chat.whatsapp.com/Fu10epRU7FMIApTD4t897g?s=cl&p=a&mlu=4&ilr=4',
+      },
       {
         name: 'Pax Choir',
         aboutMessage: 'A ministering body that makes Christ known to His people and touches them through music and song ministrations.\n\nMeeting Day & Time: Every Wednesday and Friday at 6 PM, and Saturdays at 4 PM.',
