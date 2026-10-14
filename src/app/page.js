@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
-import { MapPin } from 'lucide-react';
+import { ExternalLink, MapPin } from 'lucide-react';
 
 const paxAiderData = [
   {
@@ -52,7 +52,7 @@ const paxAiderData = [
         'Organising and Technical Ministry (Organa)',
         'Ushering Ministry',
         'Visitation Ministry',
-        'Catholic Youth Organisation (CYO)',
+        'Catholic Youth Organization (CYO)',
         'GATEs-KSJI (Student Members of St. John International)',
       ],
     },
@@ -185,7 +185,12 @@ const communityCards = [
         aboutMessage: 'We’re a family committed to visiting and spreading the love of God to Pax members in the various halls and hostels.\n\nMeeting Day & Time: Saturday at 6:30 PM\n\n“Bear one another’s burdens, and so fulfill the law of Christ.” — Galatians 6:2.',
         joinUrl: 'https://chat.whatsapp.com/Bnt6wAGqWmjLYu9RPUosRn',
       },
-      { name: 'Catholic Youth Organisation (CYO)' },
+      {
+        name: 'Catholic Youth Organization (CYO)',
+        aboutImage: '/CYO.jpg',
+        aboutMessage: 'The Catholic Youth Organization (CYO) is a parish-based international agency of the Roman Catholic Church dedicated to guiding young people toward a Christian life while supporting their religious, recreational, cultural, and social development.\n\nMeeting Day & Time: Saturdays, 2:00 PM at the Chaplaincy.',
+        joinUrl: 'https://chat.whatsapp.com/Lb6IFABIcX56lxCBLQwyK4?mode=gi_t',
+      },
       { name: 'GATEs-KSJI (Student Members of St. John International)' },
     ],
   },
@@ -502,6 +507,10 @@ export default function Home() {
             <span className="text-sm font-bold uppercase tracking-wider text-[#d97706]">Get Involved</span>
             <h2 className="mt-2 mb-4 text-3xl font-bold text-[#1e3a8a] md:text-4xl">Find Your Community</h2>
             <p className="mx-auto max-w-2xl text-slate-600">Explore Pax subgroups and connect with the community.</p>
+            <a href="https://whatsapp.com/channel/0029Vb67GB64inoks6iXBn3c" target="_blank" rel="noopener noreferrer" className="mx-auto mt-6 inline-flex max-w-full items-center justify-center gap-2 rounded-full bg-[#25D366] px-5 py-3 text-center font-semibold leading-snug text-white shadow-md transition-colors hover:bg-[#1da851] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1e40af] sm:px-6">
+              <ExternalLink aria-hidden="true" className="h-5 w-5 shrink-0" />
+              <span>Follow the PAX~KNUST 🕊️ channel on WhatsApp</span>
+            </a>
           </div>
 
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
