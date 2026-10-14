@@ -173,7 +173,12 @@ const communityCards = [
         joinUrl: 'https://chat.whatsapp.com/KEZW7a2erTkE53HnUxLJLs',
       },
       { name: 'Organising and Technical Ministry (Organa)' },
-      { name: 'Ushering Ministry' },
+      {
+        name: 'Ushering Ministry',
+        aboutImage: '/Ushers.jpg',
+        aboutMessage: 'A ministry that ensures orderliness at Mass and other church activities taking place in the Chapel.',
+        joinUrl: 'https://chat.whatsapp.com/HCARUI0x4uaIGNDRaZiYBN?s=sw&p=a&mlu=4&ilr=4',
+      },
       {
         name: 'Visitation Ministry',
         aboutImage: '/Visitation.jpg',
@@ -400,7 +405,7 @@ export default function Home() {
               Read Pax Aider
             </a>
             <a href="#communities" className="inline-flex w-full items-center justify-center rounded-full border border-white/20 bg-white/10 px-6 py-4 text-base font-bold text-white shadow-lg backdrop-blur-sm transition-all hover:-translate-y-1 hover:bg-white/20 sm:w-auto sm:px-8 sm:text-lg">
-              Join a Group
+              Join a Sub-Group
             </a>
           </div>
         </div>
