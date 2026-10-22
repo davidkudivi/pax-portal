@@ -222,8 +222,8 @@ const communityCards = [
       {
         name: 'October 2026',
         events: [
-          { name: 'Freshers Day', date: 'Sunday, 18th to 25th' },
-          { name: 'Rosary Month Climax', date: 'Saturday, 31st to Friday, 30th' },
+          { name: 'Freshers Day', date: 'Sunday, 25th' },
+          { name: 'Rosary Month Climax', date: 'Friday, 30th' },
         ],
       },
       {
