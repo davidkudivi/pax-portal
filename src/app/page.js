@@ -172,7 +172,12 @@ const communityCards = [
         aboutMessage: 'A ministering body that makes Christ known to His people and touches them through music and song ministrations.\n\nMeeting Day & Time: Every Wednesday and Friday at 6 PM, and Saturdays at 4 PM.',
         joinUrl: 'https://chat.whatsapp.com/KEZW7a2erTkE53HnUxLJLs',
       },
-      { name: 'Organising and Technical Ministry (Organa)' },
+      {
+        name: 'Organising and Technical Ministry (Organa)',
+        aboutImage: '/Organa.jpg',
+        aboutMessage: 'Divided into five wings — sound, projection, transport, design, and photography & videography — the Organising and Technical Ministry plans and coordinates programs, provides technical support, and maintains equipment.',
+        joinUrl: 'https://chat.whatsapp.com/EZhVq5EEG5M1gfKOS9AMlT?s=cl&p=a&mlu=4&ilr=4',
+      },
       {
         name: 'Ushering Ministry',
         aboutImage: '/Ushers.jpg',
@@ -191,7 +196,12 @@ const communityCards = [
         aboutMessage: 'The Catholic Youth Organization (CYO) is a parish-based international agency of the Roman Catholic Church dedicated to guiding young people toward a Christian life while supporting their religious, recreational, cultural, and social development.\n\nMeeting Day & Time: Saturdays, 2:00 PM at the Chaplaincy.',
         joinUrl: 'https://chat.whatsapp.com/Lb6IFABIcX56lxCBLQwyK4?mode=gi_t',
       },
-      { name: 'GATEs-KSJI (Student Members of St. John International)' },
+      {
+        name: 'Ghana Association of Tertiary Education Students - KSJI',
+        aboutImage: '/KSJI.jpeg',
+        aboutMessage: 'Ghana Association of Tertiary Education Students - KSJI unites KSJI Cadets and Junior Auxiliary members across Ghana\'s tertiary institutions for spiritual maturity, discipline, academic leadership, and Catholic brotherhood/sisterhood.\n\nMeeting Day & Time: Second Sunday of the month at 10:15 AM, right after the second Mass.\n\n“For God and Our Country.”',
+        joinUrl: 'https://chat.whatsapp.com/J6Kao7JKY89AleW8PXwW0I?s=sw&p=a&mlu=4&ilr=4',
+      },
     ],
   },
   {
