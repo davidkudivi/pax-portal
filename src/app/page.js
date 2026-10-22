@@ -222,8 +222,8 @@ const communityCards = [
       {
         name: 'October 2026',
         events: [
-          { name: 'Freshers Day', date: 'Sunday, 18th' },
-          { name: 'Rosary Month Climax', date: 'Saturday, 31st' },
+          { name: 'Freshers Day', date: 'Sunday, 18th to 25th' },
+          { name: 'Rosary Month Climax', date: 'Saturday, 31st to Friday, 30th' },
         ],
       },
       {
@@ -553,7 +553,9 @@ export default function Home() {
                           {month.events.map((event) => (
                             <li key={event.name} className="border-l-2 border-[#f59e0b] pl-3">
                               <p className="break-words font-semibold text-slate-800">{event.name}</p>
-                              <p className="mt-1 text-sm leading-relaxed text-slate-500">{event.date}</p>
+                              <p className="mt-1 text-sm leading-relaxed text-slate-500">
+                                {event.date.includes('Sunday') ? <strong>{event.date}</strong> : event.date}
+                              </p>
                             </li>
                           ))}
                         </ul>
