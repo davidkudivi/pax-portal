@@ -360,13 +360,13 @@ export default function Home() {
         <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
           <div className="flex cursor-pointer items-center gap-3" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
             <img
-              src="/photo_2026-10-07_13-00-05.jpg"
-              alt="IMCS Pax Romana KNUST Logo"
+              src="/Pax.jpg"
+              alt="Pax Romana KNUST Logo"
               className="h-12 w-12 rounded-full object-cover shadow-md ring-2 ring-[#1e40af]/20"
             />
             <div className="flex flex-col">
-              <span className="text-xl font-bold leading-tight text-[#1e3a8a]">IMCS Pax Romana</span>
-              <span className="text-[10px] font-semibold tracking-wider text-[#d97706]">KNUST LOCAL</span>
+              <span className="text-xl font-bold leading-tight text-[#1e3a8a]">Pax Romana KNUST</span>
+              <span className="text-[10px] font-semibold tracking-wider text-[#d97706]">- Freshers</span>
             </div>
           </div>
 
