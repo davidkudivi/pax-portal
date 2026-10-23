@@ -78,7 +78,7 @@ const paxAiderData = [
     content: {
       heading: 'Freshers Orientation',
       paragraphs: [
-        'Date: Sunday, 18th October, 2026.',
+        'Date: Sunday, 25th October, 2026.',
         'Time: 8:00 am',
         'Venue: Our Lady of the Holy Rosary Catholic Chaplaincy',
         'Freshers meet Pax Parents: After 8:00am mass @ Chaplaincy',
@@ -146,7 +146,9 @@ const communityCards = [
       },
       {
         name: 'Catholic Charismatic Renewal (ITI-CCR)',
-        action: 'Catholic Charismatic Renewal',
+        aboutImage: '/ITI-CCR.jpeg',
+        aboutMessage: 'Dear KNUST Fresher! ❤️👋\n\nWelcome to KNUST! 🎓✨\nAre you a Catholic looking for a spirit-filled society full of love, fellowship, and deep devotion to Christ?\n\nInter-Tertiary Institutions Catholic Charismatic Renewal, (ITI CCR) KNUST Local is the home you are looking for.\n\nMeet our Ministries:\n\nOutreach Ministry\nTeaching Ministry\nOrganising and Technical Ministry\nDrama Ministry\nCounselling Ministry\nMusic Ministry\nIntercessory Ministry\nVisitation and Hospitality Ministry\nHealing and Deliverance Ministry\nShepherding Ministry\n\n©️ ITI-CCR KNUST LOCAL\n\nJoin the family by filling out this form👇🏾\nhttps://chat.whatsapp.com/K4PGwX7sa0Y3cgX0u7e6f5?s=cl&p=a&mlu=4&ilr=4\n\nWe’re so excited to welcome you into the family🤍',
+        joinUrl: 'https://chat.whatsapp.com/K4PGwX7sa0Y3cgX0u7e6f5?s=cl&p=a&mlu=4&ilr=4',
       },
       {
         name: 'Knights and Ladies of the Blessed Sacrament (KLBS)/Mass Servers',
@@ -229,6 +231,7 @@ const communityCards = [
       {
         name: 'November 2026',
         events: [
+          { name: 'Rep Your Subgroup', date: 'Sunday, 1st' },
           { name: 'Akwaaba Night', date: 'Friday, 6th' },
           { name: 'Freshers Takeover Mass', date: 'Tuesday, 10th' },
           { name: 'Pax Fair 2.0', date: 'Sunday, 22nd' },
@@ -299,7 +302,7 @@ const scheduleCards = [
     accent: 'bg-green-500 text-white',
     icon: 'fa-bullhorn',
     items: [
-      { label: 'Date', time: 'Sunday, 18th October, 2026' },
+      { label: 'Date', time: 'Sunday, 25th October, 2026' },
       { label: 'Time', time: '8:00am' },
       { label: 'Venue', time: 'Our Lady of the Holy Rosary Catholic Chaplaincy' },
     ],
