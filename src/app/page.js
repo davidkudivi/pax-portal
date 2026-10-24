@@ -142,12 +142,12 @@ const communityCards = [
         name: "English Lectors' Ministry",
         aboutMessage: "A ministry dedicated to proclaiming the Word of God during Mass and other liturgical celebrations.\n\nMeeting Day & Time: Wednesday, 5:30 PM",
         aboutImage: '/Lectors.jpg',
-        joinUrl: 'https://chat.whatsapp.com/C27tzZxKLd4AzL22Me71pg?mode=gi_t',
+        joinUrl: 'https://forms.gle/R2YjCiM8cAxfJ8Bh6',
       },
       {
         name: 'Catholic Charismatic Renewal (ITI-CCR)',
         aboutImage: '/ITI-CCR.jpeg',
-        aboutMessage: 'Dear KNUST Fresher! ❤️👋\n\nWelcome to KNUST! 🎓✨\nAre you a Catholic looking for a spirit-filled society full of love, fellowship, and deep devotion to Christ?\n\nInter-Tertiary Institutions Catholic Charismatic Renewal, (ITI CCR) KNUST Local is the home you are looking for.\n\nMeet our Ministries:\n\nOutreach Ministry\nTeaching Ministry\nOrganising and Technical Ministry\nDrama Ministry\nCounselling Ministry\nMusic Ministry\nIntercessory Ministry\nVisitation and Hospitality Ministry\nHealing and Deliverance Ministry\nShepherding Ministry\n\n©️ ITI-CCR KNUST LOCAL\n\nJoin the family by filling out this form👇🏾\nhttps://chat.whatsapp.com/K4PGwX7sa0Y3cgX0u7e6f5?s=cl&p=a&mlu=4&ilr=4\n\nWe’re so excited to welcome you into the family🤍',
+        aboutMessage: 'Dear KNUST Fresher! ❤️👋\n\nWelcome to KNUST! 🎓✨\nAre you a Catholic looking for a spirit-filled society full of love, fellowship, and deep devotion to Christ?\n\nInter-Tertiary Institutions Catholic Charismatic Renewal, (ITI CCR) KNUST Local is the home you are looking for.\n\nMeet our Ministries:\n\nOutreach Ministry\nTeaching Ministry\nOrganising and Technical Ministry\nDrama Ministry\nCounselling Ministry\nMusic Ministry\nIntercessory Ministry\nVisitation and Hospitality Ministry\nHealing and Deliverance Ministry\nShepherding Ministry\n\n©️ ITI-CCR KNUST LOCAL\n\nWe’re so excited to welcome you into the family🤍',
         joinUrl: 'https://chat.whatsapp.com/K4PGwX7sa0Y3cgX0u7e6f5?s=cl&p=a&mlu=4&ilr=4',
       },
       {
