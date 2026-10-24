@@ -532,7 +532,7 @@ export default function Home() {
                 <div className="flex items-center gap-4 bg-[#1e40af] p-6">
                   <div className="flex h-12 w-12 shrink-0 items-center justify-center overflow-hidden rounded-full bg-white/20 text-xl text-white">
                     {card.title === 'Sub-Groups' || card.title === 'Pax Programs' ? (
-                      <Image src="/photo_2026-10-07_13-00-05.jpg" width={48} height={48} alt="" className="h-12 w-12 bg-white object-contain" />
+                      <Image src="/Pax.jpg" width={48} height={48} alt="" className="h-12 w-12 bg-white object-contain" />
                     ) : card.title === 'Safety & Contacts' ? (
                       <Image src="/call.png" width={32} height={32} alt="" className="h-8 w-8 object-contain" />
                     ) : (
