@@ -657,6 +657,42 @@ export default function Home() {
         </div>
       </section>
 
+      <section id="student-catechism" className="bg-[#153e39] py-16 text-white sm:py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-4xl">
+            <span className="text-sm font-bold uppercase tracking-wider text-[#fbbf24]">Starting Saturday, 31st October, 2026</span>
+            <h2 className="mt-2 text-3xl font-extrabold sm:text-4xl">Student Catechism 2026</h2>
+            <p className="mt-4 max-w-3xl leading-relaxed text-emerald-50">
+              KNUST students and the surrounding community are warmly invited to grow deeper in the Catholic faith, learn about the Sacraments, and prepare to receive the Sacraments of initiation.
+            </p>
+
+            <dl className="mt-8 grid gap-6 border-y border-white/25 py-6 sm:grid-cols-3">
+              <div>
+                <dt className="text-sm font-semibold text-[#fbbf24]">When</dt>
+                <dd className="mt-1">Every Saturday at 4:00 PM</dd>
+              </div>
+              <div>
+                <dt className="text-sm font-semibold text-[#fbbf24]">Starting</dt>
+                <dd className="mt-1">Saturday, 31st October, 2026</dd>
+              </div>
+              <div>
+                <dt className="text-sm font-semibold text-[#fbbf24]">Venue</dt>
+                <dd className="mt-1">Catholic Chaplaincy, RP Baffour, Room 7</dd>
+              </div>
+            </dl>
+
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <a href="https://forms.gle/q1QA2FSf4PZ6y3gy5" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center rounded-md bg-[#fbbf24] px-6 py-3 font-bold text-[#153e39] transition-colors hover:bg-yellow-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
+                Register for Catechism
+              </a>
+              <a href="https://chat.whatsapp.com/BLdXcRWEnAQ2LvRc6xbJUt?s=sh&p=a&mlu=4&ilr=4" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center rounded-md border border-white/50 px-6 py-3 font-bold text-white transition-colors hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
+                Join the WhatsApp Group
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <footer className="bg-slate-900 py-12 text-slate-300">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-4 sm:px-6 md:flex-row lg:px-8">
           <div className="flex items-center gap-3">
